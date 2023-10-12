@@ -1,3 +1,5 @@
+using TheHangerCompany.Data;  //added to register the database context
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,7 +26,11 @@ namespace TheHangerCompany
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-        }
+
+            services.AddDbContext<TheHangerCompanyContext>(options =>
+        options.UseSqlServer(Configuration.GetConnectionString("TheHangerCompanyContext")));   //added the code
+        
+    }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
