@@ -86,3 +86,10 @@ Then  in HangersController.cs updating the bind property
 Edit the /Views/Hangers/Index.cshtml file and add a Rating field and then updating it
 Also updated the SeedData and then gave the command in PMC to add and then update the database
 Tested , works fine 
+
+Modified the Privacy page to About Us page so as to give general information.
+
+Now giving the validation for the Hanger.cs and tested with different outputs and in the end it asks to put in the correct info for the perfect output
+
+
+At last now need to make changes to css and index page
