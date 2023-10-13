@@ -93,3 +93,4 @@ Now giving the validation for the Hanger.cs and tested with different outputs an
 
 
 At last now need to make changes to css and index page
+Added some pictures in the index file and wrote some info in About us page and done some work with css.
