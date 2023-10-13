@@ -20,9 +20,17 @@ namespace TheHangerCompany.Controllers
         }
 
         // GET: Hangers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Hanger.ToListAsync());
+            var hangers = from m in _context.Hanger
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                hangers = hangers.Where(s => s.Title.Contains(searchString));
+            }
+
+            return View(await hangers.ToListAsync());
         }
 
         // GET: Hangers/Details/5

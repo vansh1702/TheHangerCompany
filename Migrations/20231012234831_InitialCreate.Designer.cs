@@ -10,7 +10,7 @@ using TheHangerCompany.Data;
 namespace TheHangerCompany.Migrations
 {
     [DbContext(typeof(TheHangerCompanyContext))]
-    [Migration("20231012224357_InitialCreate")]
+    [Migration("20231012234831_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -28,7 +28,7 @@ namespace TheHangerCompany
             services.AddControllersWithViews();
 
             services.AddDbContext<TheHangerCompanyContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("TheHangerCompanyContext")));   //added the code
+        options.UseSqlServer(Configuration.GetConnectionString("TheHangerCompanyContext")));
         
     }
 
