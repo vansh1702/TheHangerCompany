@@ -77,3 +77,6 @@ Tested working fine
 Updated Views/Movies/Index.cshtml for search bar
 Tested and not working.......
 Found the error as I didn't replace the movies with hangers, now working perfectly fine
+After that I added search by type to the index view and made changes into Index.cshtml
+
+Now to start the Rating property 

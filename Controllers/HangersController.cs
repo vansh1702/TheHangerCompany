@@ -20,17 +20,34 @@ namespace TheHangerCompany.Controllers
         }
 
         // GET: Hangers
-        public async Task<IActionResult> Index(string searchString)
+        // GET: Movies
+        public async Task<IActionResult> Index(string hangerType, string searchString)
         {
-            var hangers = from m in _context.Hanger
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Hanger
+                                            orderby m.Type
+                                            select m.Type;
+
+            var movies = from m in _context.Hanger
                          select m;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
-                hangers = hangers.Where(s => s.Title.Contains(searchString));
+                movies = movies.Where(s => s.Title.Contains(searchString));
             }
 
-            return View(await hangers.ToListAsync());
+            if (!string.IsNullOrEmpty(hangerType))
+            {
+                movies = movies.Where(x => x.Type == hangerType);
+            }
+
+            var movieGenreVM = new HangerTypeViewModel
+            {
+                Type = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Hangers = await movies.ToListAsync()
+            };
+
+            return View(movieGenreVM);
         }
 
         // GET: Hangers/Details/5

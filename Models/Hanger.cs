@@ -17,6 +17,7 @@ namespace TheHangerCompany
 
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
+        
         public string Color { get; set; }
         public string Size { get; set; }
         public int MaxWeightCapacity { get; set; }
