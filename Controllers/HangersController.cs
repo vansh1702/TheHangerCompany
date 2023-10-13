@@ -28,26 +28,26 @@ namespace TheHangerCompany.Controllers
                                             orderby m.Type
                                             select m.Type;
 
-            var movies = from m in _context.Hanger
+            var hangers = from m in _context.Hanger
                          select m;
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                movies = movies.Where(s => s.Title.Contains(searchString));
+                hangers = hangers.Where(s => s.Title.Contains(searchString));
             }
 
             if (!string.IsNullOrEmpty(hangerType))
             {
-                movies = movies.Where(x => x.Type == hangerType);
+                hangers = hangers.Where(x => x.Type == hangerType);
             }
 
-            var movieGenreVM = new HangerTypeViewModel
+            var hangerTypeVM = new HangerTypeViewModel
             {
                 Type = new SelectList(await genreQuery.Distinct().ToListAsync()),
-                Hangers = await movies.ToListAsync()
+                Hangers = await hangers.ToListAsync()
             };
 
-            return View(movieGenreVM);
+            return View(hangerTypeVM);
         }
 
         // GET: Hangers/Details/5
