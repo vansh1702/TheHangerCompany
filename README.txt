@@ -79,4 +79,10 @@ Tested and not working.......
 Found the error as I didn't replace the movies with hangers, now working perfectly fine
 After that I added search by type to the index view and made changes into Index.cshtml
 
-Now to start the Rating property 
+Now to start the Rating property
+Made changes in 
+Models/Hanger.cs
+Then  in HangersController.cs updating the bind property 
+Edit the /Views/Hangers/Index.cshtml file and add a Rating field and then updating it
+Also updated the SeedData and then gave the command in PMC to add and then update the database
+Tested , works fine 

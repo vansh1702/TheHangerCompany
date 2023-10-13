@@ -2,8 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace TheHangerCompany
-    .Models
+namespace TheHangerCompany.Models
 {
     public class Hanger
     {
@@ -22,6 +21,8 @@ namespace TheHangerCompany
         public string Size { get; set; }
         public int MaxWeightCapacity { get; set; }
         public string Material { get; set; }
+
+        public string Rating { get; set; }
 
 
     }

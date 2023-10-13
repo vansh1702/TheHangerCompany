@@ -79,7 +79,7 @@ namespace TheHangerCompany.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Type,Price,Color,Size,MaxWeightCapacity,Material")] Hanger hanger)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Type,Price,Color,Size,MaxWeightCapacity,Material,Rating")] Hanger hanger)
         {
             if (ModelState.IsValid)
             {

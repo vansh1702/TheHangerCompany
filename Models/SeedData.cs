@@ -30,6 +30,7 @@ namespace TheHangerCompany.Models
                         Color = "Brown",
                         Size = "Adult",
                         MaxWeightCapacity = 5000,  // 5kg
+                        Rating = "R",
                         Material = "Wood"
                     },
 
@@ -42,6 +43,7 @@ namespace TheHangerCompany.Models
                         Color = "Black",
                         Size = "Adult",
                         MaxWeightCapacity = 3000,  //  3kg
+                        Rating = "R",
                         Material = "Plastic"
                     },
 
@@ -54,6 +56,7 @@ namespace TheHangerCompany.Models
                         Color = "Silver",
                         Size = "Child",
                         MaxWeightCapacity = 2500,  //  2.5kg
+                        Rating = "R",
                         Material = "Plastic"
                     },
 
@@ -66,7 +69,80 @@ namespace TheHangerCompany.Models
                         Color = "White",
                         Size = "Adult",
                         MaxWeightCapacity = 4000,  //  4kg
+                        Rating = "R",
                         Material = "Fabric"
+                    },
+                    new Hanger
+                    {
+                        Title = " Padded Hanger",
+                        ReleaseDate = DateTime.Parse("2012-1-15"),
+                        Type = "Padded",
+                        Price = 5.99M,
+                        Color = "Black",
+                        Size = "Adult",
+                        MaxWeightCapacity = 4000,  //  4kg
+                        Rating = "R",
+                        Material = "Fabric"
+                    },
+                    new Hanger
+                    {
+                        Title = "Deluxe Hanger",
+                        ReleaseDate = DateTime.Parse("2022-1-15"),
+                        Type = "Padded",
+                        Price = 5.99M,
+                        Color = "Neon",
+                        Size = "Kid",
+                        MaxWeightCapacity = 4000,  //  4kg
+                        Rating = "R",
+                        Material = "Plastic"
+                    },
+                    new Hanger
+                    {
+                        Title = "Regular Hanger",
+                        ReleaseDate = DateTime.Parse("2022-2-15"),
+                        Type = "Plastic",
+                        Price = 5.99M,
+                        Color = "Golden",
+                        Size = "Adult",
+                        MaxWeightCapacity = 4000,  //  4kg
+                        Rating = "R",
+                        Material = "Fabric"
+                    },
+                    new Hanger
+                    {
+                        Title = "Hanger",
+                        ReleaseDate = DateTime.Parse("2022-1-15"),
+                        Type = "Plastic",
+                        Price = 2.99M,
+                        Color = "White",
+                        Size = "Adult",
+                        MaxWeightCapacity = 4000,  //  4kg
+                        Rating = "R",
+                        Material = "Plastic"
+                    },
+                    new Hanger
+                    {
+                        Title = "Good Hanger",
+                        ReleaseDate = DateTime.Parse("2022-1-15"),
+                        Type = "Wooden",
+                        Price = 5.99M,
+                        Color = "Black",
+                        Size = "Adult",
+                        MaxWeightCapacity = 6000,
+                        Rating = "R",
+                        Material = "Wood"
+                    },
+                    new Hanger
+                    {
+                        Title = "Hanger",
+                        ReleaseDate = DateTime.Parse("2022-1-15"),
+                        Type = "Wooden",
+                        Price = 7.99M,
+                        Color = "White",
+                        Size = "Adult",
+                        MaxWeightCapacity = 4000,  //  4kg
+                        Rating = "R",
+                        Material = "Wood"
                     }
                 );
                 context.SaveChanges();
